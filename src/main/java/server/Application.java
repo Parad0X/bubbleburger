@@ -8,6 +8,17 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 public class Application {
+  @RequestMapping("/")
+  public String home() {
+      return
+        "<h1>API:</h1>" +
+        "<ul>" +
+        "  <li>/characters</li>" +
+        "  <li>/characters/{id}</li>" +
+        "  <li>/characters/{id}/tweets</li>" +
+        "  <li>/characters/{id}/tweets/{tweetId}</li>" +
+        "</ul>";
+  }
 
   @RequestMapping("/characters")
   public String characters() {
@@ -15,15 +26,17 @@ public class Application {
   }
 
   @RequestMapping("/characters/{id}")
-  public String getCharacter() {
+  public String getCharacter(String chracterId) {
     return "Character";
   }
 
-  public String getCharacterTweets() {
+  @RequestMapping("/characters/{id}/tweets")
+  public String getCharacterTweets(String chracterId) {
     return "Tweets";
   }
 
-  public String getTweet() {
+  @RequestMapping("/characters/{id}/tweets/{tweetId}")
+  public String getTweet(String id, String tweetId) {
     return "Tweet";
   }
 
