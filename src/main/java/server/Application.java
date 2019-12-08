@@ -1,7 +1,13 @@
 package server;
 
+import java.util.*;
+
+import com.fasterxml.jackson.annotation.JsonAlias;
+
+import org.json.simple.JSONObject;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,23 +27,40 @@ public class Application {
   }
 
   @RequestMapping("/characters")
-  public String characters() {
-    return "Characters";
+  public Collection<JSONObject> characters() {
+    Collection<Character> characters = Database.getCharacters();
+    ArrayList<JSONObject> charactersJson = new ArrayList<JSONObject>();
+
+    for (Character c: characters) {
+      charactersJson.add(c.toJson());
+    }
+
+    return charactersJson;
   }
 
   @RequestMapping("/characters/{id}")
-  public String getCharacter(String chracterId) {
-    return "Character";
+  public JSONObject getCharacter(@PathVariable("id") int characterId) {
+    return Database.getCharacter(characterId).toJson();
   }
 
   @RequestMapping("/characters/{id}/tweets")
-  public String getCharacterTweets(String chracterId) {
-    return "Tweets";
+  public Collection<JSONObject> getCharacterTweets(@PathVariable("id") int characterId) {
+    Collection<Tweet> tweets = Database.getCharacterTweets(characterId);
+    ArrayList<JSONObject> tweetsJson = new ArrayList<JSONObject>();
+
+    for (Tweet t: tweets) {
+      tweetsJson.add(t.toJson());
+    }
+
+    return tweetsJson;
   }
 
   @RequestMapping("/characters/{id}/tweets/{tweetId}")
-  public String getTweet(String id, String tweetId) {
-    return "Tweet";
+  public JSONObject getTweet(
+    @PathVariable("id") int characterId,
+    @PathVariable("tweetId") int tweetId
+  ) {
+    return Database.getTweet(tweetId).toJson();
   }
 
   public static void main(String[] args) {

@@ -1,6 +1,9 @@
+package server;
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.*;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -9,50 +12,27 @@ import org.json.simple.parser.ParseException;
 
 class Database {
 
-    class Character {
-    public int id;
-    public String full_name, email;
+    public static Collection<Character> getCharacters()
+    {
+        ArrayList<Character> characters = new ArrayList();
+
+        return characters;
     }
 
-    // class Tweet {
-    // public int id, user_id;
-    // public String tweet;
-    // }
-
-    public static void main(String[] args) {
-        JSONParser jsonParser = new JSONParser();
-        try (FileReader reader = new FileReader("looneychars.json")) {
-            //Read JSON file
-            Object obj = jsonParser.parse(reader);
-
-            JSONArray characterList = (JSONArray) obj;
-            System.out.println(characterList);
-
-            //Iterate over characters array
-            characterList.forEach(charac -> parseCharObj((JSONObject) charac));
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+    public static Character getCharacter(int id)
+    {
+        return new Character(1, "Andrei", "abc45432@gmail.com");
     }
 
-    private static void parseCharObj(JSONObject charac)
-	{
-        //Get character id
-        String id = (String) charac.get("id");
-        Integer.parseInt(id);
-        System.out.println(id);
+    public static Collection<Tweet> getCharacterTweets(int characterId)
+    {
+        ArrayList<Tweet> tweets = new ArrayList();
 
-		//Get character full name
-		String full_name = (String) charac.get("full_name");
-		System.out.println(full_name);
+        return tweets;
+    }
 
-		//Get character email
-		String email = (String) charac.get("email");
-        System.out.println(email);
-	}
+    public static Tweet getTweet(int tweetId)
+    {
+        return new Tweet(1, 5, "Hello!");
+    }
 }
