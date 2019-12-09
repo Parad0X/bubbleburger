@@ -21,11 +21,4 @@ COPY db/* ./
 
 EXPOSE 8080
 
-ENTRYPOINT [                                    \
-  "java",                                       \
-  "-XX:+UnlockExperimentalVMOptions",           \
-  "-XX:+UseCGroupMemoryLimitForHeap",           \
-  "-Djava.security.egd=file:/dev/./urandom",    \
-  "-jar",                                       \
-  "/app/src-0.0.1-SNAPSHOT.jar"                 \
-]
+ENTRYPOINT ["java", "-jar", "/app/src-0.0.1-SNAPSHOT.jar"]
