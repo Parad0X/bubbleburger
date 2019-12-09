@@ -1,0 +1,77 @@
+[
+    {
+        "id": 100,
+        "tweet": "I tawt I taw a puddy tat!",
+        "character_id": 1
+    },
+    {
+        "id": 101,
+        "tweet": "I did! I did taw a puddy tat!",
+        "character_id": 1
+    },
+    {
+        "id": 102,
+        "tweet": "It's almost Fwiday!",
+        "character_id": 1
+    },
+    {
+        "id": 103,
+        "tweet": "SsssSufferin’ ssssuccotash!",
+        "character_id": 2
+    },
+    {
+        "id": 104,
+        "tweet": "Eh, what's up, Doc?",
+        "character_id": 3
+    },
+    {
+        "id": 105,
+        "tweet": "Of course you realize, this means war!",
+        "character_id": 3
+    },
+    {
+        "id": 106,
+        "tweet": "Gee, ain't I a stinker?",
+        "character_id": 3
+    },
+    {
+        "id": 107,
+        "tweet": "It's the suspense that gets me.",
+        "character_id": 3
+    },
+    {
+        "id": 108,
+        "tweet": "Oh, boy! Wabbit twacks!",
+        "character_id": 4
+    },
+    {
+        "id": 109,
+        "tweet": "Shh. Be vewy vewy quiet. I'm hunting wabbits! Huh-huh-huh-huh!",
+        "character_id": 4
+    },
+    {
+        "id": 110,
+        "tweet": "You're despicable.",
+        "character_id": 5
+    },
+    {
+        "id": 111,
+        "tweet": "Mine! Mine! Mine!",
+        "character_id": 5
+    },
+    {
+        "id": 112,
+        "tweet": "I'm not like most people; I can't stand pain, it hurts me.",
+        "character_id": 5
+    },
+    {
+        "id": 113,
+        "tweet": "Th-th-th-that's all, folks!",
+        "character_id": 6
+    },
+    {
+        "id": 114,
+        "tweet": "Y-y-you can't fool me. I have a high I.Q.",
+        "character_id": 6
+    }
+]

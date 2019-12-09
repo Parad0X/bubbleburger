@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "full_name": "Tweety Bird",
+        "email": "tweety@looneyyunes.com"
+    },
+    {
+        "id": 2,
+        "full_name": "Syvester the Cat",
+        "email": "sylvester@looneyyunes.com"
+    },
+    {
+        "id": 3,
+        "full_name": "Bugs Bunny",
+        "email": "bunny@looneyyunes.com"
+    },
+    {
+        "id": 4,
+        "full_name": "Elmer Fudd",
+        "email": "elmer@looneyyunes.com"
+    },
+    {
+        "id": 5,
+        "full_name": "Daffy Duck",
+        "email": "daffy@looneyyunes.com"
+    },
+    {
+        "id": 6,
+        "full_name": "Porky Pig",
+        "email": "porky@looneyyunes.com"
+    }
+]

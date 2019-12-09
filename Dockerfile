@@ -17,6 +17,7 @@ FROM openjdk:8-jre-slim
 WORKDIR /app
 
 COPY --from=build /opt/src/build/libs/*.jar ./
+COPY db/* ./
 
 EXPOSE 8080
 
@@ -28,4 +29,3 @@ ENTRYPOINT [                                    \
   "-jar",                                       \
   "/app/src-0.0.1-SNAPSHOT.jar"                 \
 ]
-

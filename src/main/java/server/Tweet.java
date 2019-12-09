@@ -3,13 +3,14 @@ package server;
 import org.json.simple.JSONObject;
 
 class Tweet {
-  public int id, character_id;
+  public long id;
+  public long characterId;
   public String tweet;
 
-  public Tweet(int id, int character_id, String tweet)
+  public Tweet(long id, long character_id, String tweet)
   {
     this.id = id;
-    this.character_id = character_id;
+    this.characterId = character_id;
     this.tweet = tweet;
   }
 
@@ -17,7 +18,7 @@ class Tweet {
   {
       JSONObject res = new JSONObject();
       res.put("id", id);
-      res.put("character_id", character_id);
+      res.put("character_id", characterId);
       res.put("tweet", tweet);
       return res;
   }

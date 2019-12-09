@@ -3,10 +3,10 @@ package server;
 import org.json.simple.JSONObject;
 
 class Character {
-  public int id;
+  public long id;
   public String full_name, email;
 
-  public Character(int id, String full_name, String email)
+  public Character(long id, String full_name, String email)
   {
     this.id = id;
     this.full_name = full_name;

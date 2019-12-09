@@ -2,8 +2,7 @@ package server;
 
 import java.util.*;
 
-import com.fasterxml.jackson.annotation.JsonAlias;
-
+import javax.servlet.http.*;
 import org.json.simple.JSONObject;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -60,7 +59,7 @@ public class Application {
     @PathVariable("id") int characterId,
     @PathVariable("tweetId") int tweetId
   ) {
-    return Database.getTweet(tweetId).toJson();
+    return Database.getTweet(characterId, tweetId).toJson();
   }
 
   public static void main(String[] args) {
