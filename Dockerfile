@@ -21,4 +21,4 @@ COPY db/* ./
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "/app/src-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "/app/src-1.0.jar"]
